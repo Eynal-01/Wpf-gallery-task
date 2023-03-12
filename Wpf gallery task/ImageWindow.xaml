@@ -1,0 +1,61 @@
+﻿<Window x:Class="Wpf_gallery_task.ImageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_gallery_task"
+        mc:Ignorable="d"
+        Title="ImageWindow" Height="550" Width="1000">
+    <Grid>
+        <Grid Name="secondGrid" Opacity="10">
+            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <Image Name="secondImage" Source="{Binding Path}" ></Image>
+            </Label>
+            <Button BorderThickness="0" Width="80" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding CloseCommand}">
+                <Button.Background>
+                    <ImageBrush ImageSource="Icons/back.png" ></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button BorderThickness="0" Width="70" Height="70" VerticalAlignment="Bottom" Margin="90,0,0,5" Command="{Binding PlayCommand}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Icons/play.png" ></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button BorderThickness="0" Width="80" Height="80" VerticalAlignment="Bottom" Margin="0,0,150,0" Command="{Binding StopCommand}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Icons/pause.png" ></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button BorderThickness="0" Width="70" Height="70" VerticalAlignment="Bottom" Margin="0,0,360,7" Command="{Binding BackCommand}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Icons/back.png" ></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button BorderThickness="0" Width="70" Height="70" VerticalAlignment="Bottom" Margin="290,0,0,7" Command="{Binding ForwardCommand}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Icons/forward.png" ></ImageBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
